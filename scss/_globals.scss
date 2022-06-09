@@ -1,0 +1,53 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  display: block;
+  width: 7.1rem;
+  height: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: block;
+  border-radius: 4px;
+  padding: 0.35rem 0;
+  background: linear-gradient(to right, $darkRose, $mainRose);
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.5px;
+
+  &:hover {
+    background: $darkRose;
+    background: linear-gradient(to right, $darkRose, $darkRose);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  padding: 1rem 1rem;
+}
+
+.section_title {
+}
