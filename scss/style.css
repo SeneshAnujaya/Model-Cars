@@ -54,6 +54,22 @@ ul {
   padding: 1rem 1rem;
 }
 
+.section_title {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #0e79b2;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  text-transform: capitalize;
+}
+
+.title_underline {
+  width: 1rem;
+  height: 1rem;
+  background-color: blue;
+}
+
 .header {
   width: 100%;
   max-width: 1920px;
@@ -417,6 +433,6 @@ ul {
 }
 
 .about_container {
-  padding: 0 3rem;
+  padding: 2rem 3rem;
 }
 /*# sourceMappingURL=style.css.map */
