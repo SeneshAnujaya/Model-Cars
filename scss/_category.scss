@@ -1,0 +1,24 @@
+#category {
+  .category_container {
+    .category_box {
+      margin: 2rem auto;
+      background-color: burlywood;
+
+      .picture_box {
+        width: 100%;
+        height: auto;
+
+        img {
+          width: 100%;
+          height: auto;
+          border-top-left-radius: 1.2rem;
+          border-top-right-radius: 1.2rem;
+        }
+      }
+
+      .info_btn {
+        padding: 1rem;
+      }
+    }
+  }
+}
