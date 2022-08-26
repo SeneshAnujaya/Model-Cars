@@ -1,0 +1,91 @@
+#products {
+  padding: 1.5rem 0;
+  background-color: $lightBlue;
+  .product_container {
+    width: 100%;
+    padding: 1.5rem 0;
+
+    .product_btn_container {
+      margin: auto;
+      .product_btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        button {
+          width: 47px;
+          height: 25px;
+          padding: 1px;
+          color: $darkBlue;
+          font-size: 11px;
+          font-weight: bold;
+          border: 1.5px solid $darkBlue;
+          border-radius: 0.2rem;
+          background-color: $lightBlue;
+
+          @media (min-width: 481px) and (max-width: 768px) {
+            width: 60px;
+          }
+
+          &:hover {
+            background-color: $darkBlue;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .product_item_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 3rem auto;
+
+      .product_box {
+        max-width: 245px;
+        height: auto;
+        background-color: $white;
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+          border-top-left-radius: 0.9rem;
+          border-top-right-radius: 0.9rem;
+          overflow: hidden;
+        }
+        .product_content {
+          padding: 0.8rem;
+
+          .product_caption {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h4 {
+              font-size: 1.1rem;
+              font-weight: bold;
+              letter-spacing: 1.3px;
+              color: $darkBlue;
+            }
+
+            p {
+              font-weight: 600;
+              font-size: 0.8rem;
+              color: $darkBlue;
+            }
+          }
+          .price_range {
+            margin: 0.7rem 0;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: $darkBlue;
+          }
+        }
+      }
+    }
+  }
+}
