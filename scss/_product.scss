@@ -1,6 +1,7 @@
 #products {
-  padding: 1.5rem 0;
+  padding: 1.5rem 0 0 0;
   background-color: $lightBlue;
+
   .product_container {
     width: 100%;
     padding: 1.5rem 0;
@@ -13,19 +14,17 @@
         justify-content: center;
         gap: 1rem;
 
-        button {
-          width: 47px;
-          height: 25px;
-          padding: 1px;
-          color: $darkBlue;
-          font-size: 11px;
-          font-weight: bold;
-          border: 1.5px solid $darkBlue;
-          border-radius: 0.2rem;
-          background-color: $lightBlue;
+        .product_btn {
+          background-color: transparent;
 
           @media (min-width: 481px) and (max-width: 768px) {
             width: 60px;
+            font-size: 12px;
+          }
+          @media (min-width: 769px) {
+            width: 70px;
+            height: 27px;
+            font-size: 13px;
           }
 
           &:hover {
@@ -37,35 +36,57 @@
     }
 
     .product_item_container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       gap: 1.5rem;
       margin: 3rem auto;
+      display: grid;
+
+      @media (min-width: 769px) and (max-width: 1024px) {
+        grid-template-columns: repeat(2, 2fr);
+      }
+
+      @media (min-width: 1025px) {
+        grid-template-columns: repeat(3, 2fr);
+      }
+      @media (min-width: 1201px) {
+        gap: 2rem;
+      }
 
       .product_box {
-        max-width: 245px;
+        width: 280px;
         height: auto;
         background-color: $white;
+        border-top-left-radius: 0.9rem;
+        border-top-right-radius: 0.9rem;
+        border-bottom-left-radius: 0.9rem;
+        border-bottom-right-radius: 0.9rem;
+        overflow: hidden;
+        margin: auto;
 
-        img {
-          display: block;
-          width: 100%;
-          height: auto;
-          border-top-left-radius: 0.9rem;
-          border-top-right-radius: 0.9rem;
+        @media (max-width: 480px) {
+          max-width: 250px;
+        }
+
+        .pic_container {
+          max-width: 300px;
+          height: 190px;
           overflow: hidden;
+
+          img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+          }
         }
         .product_content {
-          padding: 0.8rem;
+          padding: 1.5rem 1rem;
 
           .product_caption {
             display: flex;
             align-items: center;
             justify-content: space-between;
             h4 {
-              font-size: 1.1rem;
+              font-size: 1.15rem;
               font-weight: bold;
               letter-spacing: 1.3px;
               color: $darkBlue;
@@ -75,14 +96,47 @@
               font-weight: 600;
               font-size: 0.8rem;
               color: $darkBlue;
+              letter-spacing: 0.5px;
             }
           }
           .price_range {
-            margin: 0.7rem 0;
+            margin: 1.1rem 0;
             font-size: 0.8rem;
             font-weight: bold;
             letter-spacing: 1px;
             color: $darkBlue;
+          }
+          .product_item_btns {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .get_btn {
+              width: 80px;
+              height: 27px;
+              background-color: $white;
+              border: 2px solid $skyBlue;
+              border-radius: 0.3rem;
+              cursor: pointer;
+              transition: all 0.1s ease-in;
+
+              &:hover {
+                background: linear-gradient(to right, #eb2f5f, #fd4a77);
+                color: $white;
+                border: none;
+              }
+            }
+
+            .price_btn {
+              width: 60px;
+              height: 25px;
+              background-color: $darkBlue;
+              color: $white;
+              font-size: 0.8rem;
+              font-weight: lighter;
+              font-style: italic;
+              letter-spacing: 2px;
+            }
           }
         }
       }
