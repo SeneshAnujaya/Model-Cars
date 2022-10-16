@@ -1,16 +1,25 @@
 #testimonial {
-  padding: 1.5rem 0 0 0;
+  padding: 2.5rem 0 1.5rem 0;
 
   .testimonial_container {
     width: 100%;
     padding: 1.5rem 0;
 
     .testimonial_item {
-      width: 100%;
+      position: relative;
+      width: 850px;
+      max-width: 100%;
+
       background-color: $lightBlue;
       text-align: center;
-      padding: 1rem 1rem 2rem 1rem;
+      padding: 1rem 1.6rem 1rem 1.6rem;
       border-radius: 0.9rem;
+      margin: auto;
+
+      @media screen and (min-width: 481px) {
+        max-width: calc(100% - 3.2rem);
+        padding: 1.5rem 0;
+      }
 
       .testimonial_pic {
         width: 80px;
@@ -59,17 +68,45 @@
       h4 {
         color: $darkBlue;
         margin: 0.7rem auto 0rem auto;
-        font-size: 1.15rem;
+        font-size: 1.1rem;
+
+        @media (min-width: 801px) {
+          font-size: 1.2rem;
+        }
       }
       p {
         font-size: 0.9rem;
         font-weight: 500;
+        line-height: normal;
         color: $darkBlue;
       }
       .test_content {
+        max-width: 640px;
         text-align: center;
-        font-size: 1rem;
+        font-size: 0.85rem;
+        font-weight: 500;
+        line-height: 1.6;
         margin: 1.5rem auto 1rem auto;
+
+        @media (min-width: 801px) {
+          font-size: 0.9rem;
+        }
+      }
+
+      .left_arrow,
+      .right_arrow {
+        font-size: 1.6rem;
+        color: $darkBlue;
+      }
+      .left_arrow {
+        position: absolute;
+        top: 40%;
+        left: 1rem;
+      }
+      .right_arrow {
+        position: absolute;
+        top: 40%;
+        right: 1rem;
       }
     }
   }
